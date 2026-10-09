@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoxVerse Studio - Voiceover & Multilingual Dubbing Network</title>
+  <meta name="description" content="Premier global voiceover, multilingual film dubbing, audiobook narration, and audio post-production studio. High-definition native talent roster and state-of-the-art ADR facilities.">
+  
+  <!-- Professional Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome / Feather Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  
+  <!-- SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%234F46E5'/><stop offset='100%' stop-color='%2306B6D4'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='%230B0F19'/><rect x='2' y='2' width='96' height='96' rx='20' fill='none' stroke='url(%23g)' stroke-width='4'/><rect x='25' y='40' width='10' height='20' rx='5' fill='%234F46E5'/><rect x='45' y='25' width='10' height='50' rx='5' fill='%2306B6D4'/><rect x='65' y='35' width='10' height='30' rx='5' fill='%233B82F6'/></svg>">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- GLOBAL HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <!-- LOGO -->
+      <a href="#home1" class="brand-logo">
+        <div class="logo-icon">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+          <span class="bar bar4"></span>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">VOX<span class="accent-text">VERSE</span></span>
+          <span class="brand-tagline">STUDIOS</span>
+        </div>
+      </a>
+
+      <!-- CENTER NAVIGATION -->
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+          
+          <!-- HOME DROPDOWN -->
+          <li class="nav-item dropdown-item" data-page-group="home">
+            <a href="#home1" class="nav-link dropdown-toggle" id="nav-home">
+              <span class="nav-text">Home</span>
+              <i class="fa-solid fa-chevron-down drop-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link" id="nav-home1">
+                  <div class="drop-link-title"><i class="fa-solid fa-microphone-lines"></i> Home 1</div>
+                  <div class="drop-link-sub">Commercial & Brand Voiceover</div>
+                </a>
+              </li>
+              <li>
+                <a href="home2.html" class="dropdown-link" id="nav-home2">
+                  <div class="drop-link-title"><i class="fa-solid fa-film"></i> Home 2</div>
+                  <div class="drop-link-sub">Dubbing & Movie Localization</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" id="nav-about">
+              <span class="nav-text">About</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="services.html" class="nav-link" id="nav-services">
+              <span class="nav-text">Services</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="talent.html" class="nav-link" id="nav-talent">
+              <span class="nav-text">Talent Roster</span>
+            </a>
+          </li>
+
+          <!-- UNIQUE CUSTOM PAGES -->
+          <li class="nav-item">
+            <a href="audiobook.html" class="nav-link" id="nav-audiobook">
+              <span class="nav-text">Audiobook Vault</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="localization.html" class="nav-link" id="nav-localization">
+              <span class="nav-text">Global Localization</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link" id="nav-contact">
+              <span class="nav-text">Contact</span>
+            </a>
+          </li>
+
+          <!-- HEADER UTILITIES (INSIDE MOBILE HAMBURGER MENU) -->
+          <li class="nav-item nav-utility-item">
+            <div class="mobile-utils-row">
+              <!-- RTL / LTR Toggle -->
+              <button class="icon-btn dir-toggle" id="dirToggle" title="Toggle Page Direction (LTR/RTL)" aria-label="Toggle Layout Direction">
+                <span class="dir-badge LTR-label">LTR</span>
+                <span class="dir-badge RTL-label">RTL</span>
+              </button>
+
+              <!-- Dark / Light Theme Toggle -->
+              <button class="icon-btn theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Theme">
+                <i class="fa-solid fa-moon dark-icon"></i>
+                <i class="fa-solid fa-sun light-icon"></i>
+              </button>
+            </div>
+          </li>
+
+          <li class="nav-item nav-utility-item mt-2">
+            <a href="contact.html" class="btn btn-primary btn-block header-cta">Book Studio</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- RIGHT UTILITIES (TOGGLES, CTA & HAMBURGER) -->
+      <div class="header-actions">
+        <!-- RTL / LTR Toggle -->
+        <button class="icon-btn dir-toggle desktop-only-btn" id="dirToggle" title="Toggle Page Direction (LTR/RTL)" aria-label="Toggle Layout Direction">
+          <span class="dir-badge LTR-label">LTR</span>
+          <span class="dir-badge RTL-label">RTL</span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button class="icon-btn theme-toggle desktop-only-btn" id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Theme">
+          <i class="fa-solid fa-moon dark-icon"></i>
+          <i class="fa-solid fa-sun light-icon"></i>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta desktop-only-btn">Book Studio</a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-nav-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN PAGE CONTAINER -->
+  <main class="page-content" id="app">
+
+      
+      <!-- Section 1: Services Hero -->
+      <section class="section hero-section hero-services">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container hero-centered">
+          <div class="hero-content">
+            <span class="sub-heading">End-To-End Production</span>
+            <h1 class="hero-title">World-Class <span class="white-text">Voice & Sound Services</span></h1>
+            <p class="hero-subtitle">Comprehensive acoustic solutions for advertising, cinematic film dubbing, audiobook publishing, and game sound design.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Service Item 1 - Commercial Voiceover -->
+      <section class="section service-detail-section">
+        <div class="container">
+          <div class="grid grid-2 align-center">
+            <div>
+              <div class="service-tag"><i class="fa-solid fa-bullhorn"></i> SERVICE 01</div>
+              <h2>Commercial Voiceover Production</h2>
+              <p>Full-service commercial recording for TV spots, radio commercials, web videos, and podcasts. We handle casting, live directing, recording, and broadcast mastering.</p>
+              <ul class="service-features">
+                <li><i class="fa-solid fa-check"></i> ISDN / Source-Connect Live Sessions</li>
+                <li><i class="fa-solid fa-check"></i> Broadcast Quality EQ & Compression Mastering</li>
+                <li><i class="fa-solid fa-check"></i> Full Buyout Rights & Regional Union Clearance</li>
+              </ul>
+              <a href="contact.html" class="btn btn-primary mt-3">Book Commercial Spot</a>
+            </div>
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=900&q=90" alt="Commercial Voiceover Production - Professional Microphone" class="service-img" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Service Item 2 - Multilingual Dubbing & ADR -->
+      <section class="section service-detail-section bg-alt">
+        <div class="container">
+          <div class="grid grid-2 align-center">
+            <div class="service-img-wrapper order-2-mobile">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq7ZqxsGR9Dc4aECtWp3VkRiRtFpXCFhxsrm4YJXjnQLisu71Xqnlz784&s=10" alt="Multilingual Film Dubbing - Cinema Recording" class="service-img" loading="lazy">
+            </div>
+            <div>
+              <div class="service-tag"><i class="fa-solid fa-film"></i> SERVICE 02</div>
+              <h2>Multilingual Film & TV Dubbing</h2>
+              <p>Turnkey localization for feature films, Netflix/Amazon series, and documentaries. Script adaptation, lip-sync recording, and full M&E mix integration.</p>
+              <ul class="service-features">
+                <li><i class="fa-solid fa-check"></i> Syllable-matched lip-sync translation</li>
+                <li><i class="fa-solid fa-check"></i> Cast of native professional voice actors</li>
+                <li><i class="fa-solid fa-check"></i> 5.1 & Dolby Atmos surround re-recording</li>
+              </ul>
+              <a href="contact.html" class="btn btn-secondary mt-3">Request Dubbing Plan</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Service Item 3 - Audiobook Narration & Production -->
+      <section class="section service-detail-section">
+        <div class="container">
+          <div class="grid grid-2 align-center">
+            <div>
+              <div class="service-tag"><i class="fa-solid fa-book-open-reader"></i> SERVICE 03</div>
+              <h2>Audiobook Production & Narration</h2>
+              <p>From single-narrator fiction to multi-cast full-cast audio dramas. Audible ACX compliant mastering and proofing.</p>
+              <ul class="service-features">
+                <li><i class="fa-solid fa-check"></i> ACX / Audible RMS Standard Mastering</li>
+                <li><i class="fa-solid fa-check"></i> Audio Proofing & Mouth-Noise Removal</li>
+                <li><i class="fa-solid fa-check"></i> Chapterizing and ID3 Tagging</li>
+              </ul>
+              <a href="audiobook.html" class="btn btn-outline mt-3">Visit Audiobook Vault</a>
+            </div>
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=900&q=90" alt="Audiobook Narration Production - Professional Recording" class="service-img" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Service Item 4 - Audio Post & Sound Design -->
+      <section class="section service-detail-section bg-alt">
+        <div class="container">
+          <div class="grid grid-2 align-center">
+            <div class="service-img-wrapper order-2-mobile">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2XiiCGszwnWCtIwaabLJjYsiFcyW-5ZzeOjoQfQYPJA&s=10" alt="Audio Post Production & Sound Design - Mixing Console" class="service-img" loading="lazy">
+            </div>
+            <div>
+              <div class="service-tag"><i class="fa-solid fa-sliders"></i> SERVICE 04</div>
+              <h2>Audio Post-Production & Sound Design</h2>
+              <p>Complete sound design, Foley recording, dialog cleanup (iZotope RX Advanced), and custom musical sonic branding.</p>
+              <ul class="service-features">
+                <li><i class="fa-solid fa-check"></i> iZotope RX 10 Advanced Dialog Restoration</li>
+                <li><i class="fa-solid fa-check"></i> Custom Foley and Cinematic Sound Effects</li>
+                <li><i class="fa-solid fa-check"></i> Sonic Branding & Audio Logo Composition</li>
+              </ul>
+              <a href="contact.html" class="btn btn-primary mt-3">Get Post Estimate</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW: Studio Equipment Visual Gallery -->
+      <section class="section equipment-gallery-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading"><i class="fa-solid fa-microphone"></i> Professional Audio Gear</span>
+            <h2>Industry-Leading Equipment</h2>
+            <p>Our studios are equipped with premium microphones, preamps, and monitoring systems used by top professionals worldwide.</p>
+          </div>
+          
+          <div class="equipment-visual-grid">
+            <div class="equipment-img-card glass-panel">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRQxY0TDZ4wPhDutr3LqCUcdndaIahDanYfaO72i-UQogAhoTmrTrSLkyf&s=10" alt="Professional Studio Microphone" loading="lazy">
+              <div class="equipment-overlay">
+                <h4><i class="fa-solid fa-microphone"></i> Premium Microphones</h4>
+                <p>Neumann U87, Sony C800G, Sennheiser MKH 416</p>
+              </div>
+            </div>
+            <div class="equipment-img-card glass-panel">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl4awm1J_imVVa_6EgmV_6nN0_Ni_aRNCDJScEANC_et3pyBsBLmoItv7c&s=10" alt="Professional Mixing Console" loading="lazy">
+              <div class="equipment-overlay">
+                <h4><i class="fa-solid fa-sliders"></i> SSL Mixing Consoles</h4>
+                <p>SSL Duality & Neve 1073 Vintage Preamps</p>
+              </div>
+            </div>
+            <div class="equipment-img-card glass-panel">
+              <img src="https://jonnyelwyn.co.uk/wp-content/uploads/2015/08/DV247-studio-monitor-comparison.jpg" alt="Professional Studio Monitors" loading="lazy">
+              <div class="equipment-overlay">
+                <h4><i class="fa-solid fa-volume-high"></i> Studio Monitors</h4>
+                <p>Genelec 8351B SAM & Focal Trio6 Be</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Enterprise SLA & Delivery Guarantee Matrix -->
+      <section class="section sla-section" id="sla-matrix">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading"><i class="fa-solid fa-shield-halved"></i> Production SLA & Reliability</span>
+            <h2>Enterprise Delivery Matrix</h2>
+            <p>Guaranteed turnarounds, bank-grade encryption, and zero-compromise acoustic quality standards.</p>
+          </div>
+          
+          <div class="matrix-grid">
+            
+            <!-- Matrix Card 1 -->
+            <div class="matrix-card glass-panel">
+              <div class="matrix-badge"><i class="fa-solid fa-bolt"></i> Speed SLA</div>
+              <div class="matrix-header">
+                <div class="matrix-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                <div>
+                  <span class="matrix-metric">24-48 HR</span>
+                  <span class="matrix-subtitle">Guaranteed Delivery</span>
+                </div>
+              </div>
+              <h3>Express Turnaround</h3>
+              <p>Rapid dispatch workflow for broadcast commercial spots and urgent script pick-ups with dedicated sound stage priority.</p>
+              <ul class="matrix-checklist">
+                <li><i class="fa-solid fa-circle-check"></i> Same-day emergency casting</li>
+                <li><i class="fa-solid fa-circle-check"></i> Instant digital dropzone access</li>
+                <li><i class="fa-solid fa-circle-check"></i> Live engineer session monitoring</li>
+              </ul>
+              <div class="matrix-footer">
+                <span class="matrix-tag"><i class="fa-solid fa-clock"></i> 99.9% On-Time Record</span>
+              </div>
+            </div>
+
+            <!-- Matrix Card 2 -->
+            <div class="matrix-card glass-panel">
+              <div class="matrix-badge alt"><i class="fa-solid fa-lock"></i> Security SLA</div>
+              <div class="matrix-header">
+                <div class="matrix-icon alt"><i class="fa-solid fa-user-shield"></i></div>
+                <div>
+                  <span class="matrix-metric">AES-256</span>
+                  <span class="matrix-subtitle">Bank-Grade Security</span>
+                </div>
+              </div>
+              <h3>NDA & IP Compliance</h3>
+              <p>Strict physical and digital isolation protocols for unreleased AAA game titles and studio feature films.</p>
+              <ul class="matrix-checklist">
+                <li><i class="fa-solid fa-circle-check"></i> Dynamic audio watermarking</li>
+                <li><i class="fa-solid fa-circle-check"></i> ISO 27001 biometrics stages</li>
+                <li><i class="fa-solid fa-circle-check"></i> Executed NDA per voice actor</li>
+              </ul>
+              <div class="matrix-footer">
+                <span class="matrix-tag"><i class="fa-solid fa-shield"></i> Zero Data Leak Guarantee</span>
+              </div>
+            </div>
+
+            <!-- Matrix Card 3 -->
+            <div class="matrix-card glass-panel">
+              <div class="matrix-badge"><i class="fa-solid fa-rotate-left"></i> Quality SLA</div>
+              <div class="matrix-header">
+                <div class="matrix-icon"><i class="fa-solid fa-headphones-simple"></i></div>
+                <div>
+                  <span class="matrix-metric">100%</span>
+                  <span class="matrix-subtitle">Free Pick-up Takes</span>
+                </div>
+              </div>
+              <h3>Unlimited Pickups</h3>
+              <p>Free mispronunciation and director pickup takes included on all bookings to ensure 100% script fidelity.</p>
+              <ul class="matrix-checklist">
+                <li><i class="fa-solid fa-circle-check"></i> Free mispronunciation corrections</li>
+                <li><i class="fa-solid fa-circle-check"></i> Full tone & pacing matching</li>
+                <li><i class="fa-solid fa-circle-check"></i> Unlimited revision requests</li>
+              </ul>
+              <div class="matrix-footer">
+                <span class="matrix-tag"><i class="fa-solid fa-thumbs-up"></i> Satisfaction Approved</span>
+              </div>
+            </div>
+
+            <!-- Matrix Card 4 -->
+            <div class="matrix-card glass-panel">
+              <div class="matrix-badge alt"><i class="fa-solid fa-award"></i> Format SLA</div>
+              <div class="matrix-header">
+                <div class="matrix-icon alt"><i class="fa-solid fa-sliders"></i></div>
+                <div>
+                  <span class="matrix-metric">ATMOS</span>
+                  <span class="matrix-subtitle">Dolby 7.1.4 Master</span>
+                </div>
+              </div>
+              <h3>Broadcast Compliant</h3>
+              <p>Mastered to exact EBU R128, CALM Act, and ACX/Audible loudness standards across all distribution formats.</p>
+              <ul class="matrix-checklist">
+                <li><i class="fa-solid fa-circle-check"></i> EBU R128 & CALM Act certified</li>
+                <li><i class="fa-solid fa-circle-check"></i> Audible ACX zero-fail guarantee</li>
+                <li><i class="fa-solid fa-circle-check"></i> 24-bit / 96kHz lossless stems</li>
+              </ul>
+              <div class="matrix-footer">
+                <span class="matrix-tag"><i class="fa-solid fa-certificate"></i> Certified Post Suite</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    
+</main>
+
+  <!-- COMMON FOOTER (Section 6 for all page views) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top grid grid-4">
+        
+        <div class="footer-brand">
+          <a href="#home1" class="brand-logo mb-3" onclick="navigateTo('home1')">
+            <div class="logo-icon">
+              <span class="bar bar1"></span>
+              <span class="bar bar2"></span>
+              <span class="bar bar3"></span>
+            </div>
+            <div class="logo-text">
+              <span class="brand-name">VOX<span class="accent-text">VERSE</span></span>
+              <span class="brand-tagline">STUDIOS</span>
+            </div>
+          </a>
+          <p>Premier global voiceover, film dubbing, audiobook production, and Dolby Atmos audio post-production studios.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home1" onclick="navigateTo('home1')">Home 1 (Commercial)</a></li>
+            <li><a href="#home2" onclick="navigateTo('home2')">Home 2 (Dubbing)</a></li>
+            <li><a href="#about" onclick="navigateTo('about')">About Us</a></li>
+            <li><a href="#services" onclick="navigateTo('services')">Our Services</a></li>
+            <li><a href="#talent" onclick="navigateTo('talent')">Talent Roster</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Specialties</h4>
+          <ul>
+            <li><a href="#portfolio" onclick="navigateTo('portfolio')">Case Studies</a></li>
+            <li><a href="#audiobook" onclick="navigateTo('audiobook')">Audiobook Vault</a></li>
+            <li><a href="#localization" onclick="navigateTo('localization')">Global Localization</a></li>
+            <li><a href="#contact" onclick="navigateTo('contact')">Contact & Quotes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Studio Audio Insider</h4>
+          <p>Subscribe for casting calls, studio technical blogs, and voice talent spotlights.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to VoxVerse Studio newsletter!');">
+            <input type="email" class="form-control" placeholder="Enter work email..." required>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+          <div class="studio-status mt-3">
+            <span class="pulse-dot"></span> <strong>Soundstage A & B:</strong> Live in Session
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VoxVerse Sound Studios LLC. All rights reserved. Built with precision acoustic design.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Usage</a>
+          <a href="#">Security Protocol</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PERSISTENT GLOBAL AUDIO PLAYER OVERLAY BAR -->
+  <div class="audio-player-bar hidden" id="globalAudioPlayer">
+    <div class="player-bar-container">
+      
+      <div class="player-track-info">
+        <div class="audio-wave-anim">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div>
+          <div class="player-track-title" id="playerTrackTitle">Track Title</div>
+          <div class="player-track-artist" id="playerTrackArtist">Talent Name</div>
+        </div>
+      </div>
+
+      <div class="player-controls-center">
+        <button class="player-btn" onclick="togglePlayPause()" id="playPauseBtn"><i class="fa-solid fa-pause"></i></button>
+        <div class="player-progress-wrapper">
+          <span id="playerCurrentTime">0:00</span>
+          <div class="progress-bar-bg" onclick="seekAudio(event)">
+            <div class="progress-bar-fill" id="playerProgressFill"></div>
+          </div>
+          <span id="playerTotalTime">0:30</span>
+        </div>
+      </div>
+
+      <div class="player-actions-right">
+        <i class="fa-solid fa-volume-high"></i>
+        <button class="close-player-btn" onclick="closeAudioPlayer()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="audioEngine" preload="none"></audio>
+
+  <script src="app.js"></script>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script>
+    (function initStudioMap() {
+      var map = null;
+
+      function createMap() {
+        var mapEl = document.getElementById('studioLeafletMap');
+        if (!mapEl || mapEl._leafletMap) return;
+
+        var isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+        var tileUrl = isDark
+          ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+          : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+
+        map = L.map('studioLeafletMap', { scrollWheelZoom: false }).setView([30, 10], 2);
+        mapEl._leafletMap = map;
+
+        L.tileLayer(tileUrl, {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          subdomains: 'abcd',
+          maxZoom: 19
+        }).addTo(map);
+
+        var studios = [
+          { lat: 34.1808, lng: -118.3089, name: '🎙️ Los Angeles — Burbank Soundstage A', info: '2400 N Hollywood Way, Burbank, CA<br><strong>Dolby Atmos 7.1.4 Certified</strong>' },
+          { lat: 51.5138, lng: -0.1313, name: '🎚️ London — Soho Audio Hub', info: '45 Dean Street, Soho, London W1D<br><strong>SSL Analogue Console Stage</strong>' },
+          { lat: 35.6938, lng: 139.7034, name: '🎌 Tokyo — Shinjuku Sound Lab', info: '3-14-1 Minami-Shinjuku, Tokyo<br><strong>Pro Tools HDX Anime Hub</strong>' }
+        ];
+
+        var customIcon = L.divIcon({
+          className: '',
+          html: '<div style="width:16px;height:16px;background:linear-gradient(135deg,#4F46E5,#06B6D4);border-radius:50%;border:2px solid #fff;box-shadow:0 0 12px rgba(6,182,212,0.9);"></div>',
+          iconSize: [16, 16],
+          iconAnchor: [8, 8],
+          popupAnchor: [0, -10]
+        });
+
+        studios.forEach(function(s) {
+          L.marker([s.lat, s.lng], { icon: customIcon })
+            .addTo(map)
+            .bindPopup('<strong style="font-family:Outfit,sans-serif;color:#0F172A;">' + s.name + '</strong><br><span style="font-size:0.82rem;color:#475569;">' + s.info + '</span>');
+        });
+
+        var obs = new MutationObserver(function() {
+          if (!map) return;
+          var dark = document.documentElement.getAttribute('data-theme') !== 'light';
+          var url = dark
+            ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+            : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+          map.eachLayer(function(l) { if (l.options && l.options.attribution) map.removeLayer(l); });
+          L.tileLayer(url, { attribution: '&copy; OpenStreetMap &copy; CARTO', subdomains: 'abcd', maxZoom: 19 }).addTo(map);
+        });
+        obs.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      }
+
+      function refreshMap() {
+        if (!map) {
+          createMap();
+        }
+        if (map) {
+          setTimeout(function() {
+            map.invalidateSize();
+          }, 150);
+        }
+      }
+
+      window.tryInitStudioMap = refreshMap;
+      window.initStudioMap = refreshMap;
+
+      document.addEventListener('DOMContentLoaded', createMap);
+      window.addEventListener('load', refreshMap);
+      document.addEventListener('click', function(e) {
+        if (e.target && (e.target.closest('[onclick*="contact"]') || e.target.closest('a[href*="contact"]'))) {
+          setTimeout(refreshMap, 200);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

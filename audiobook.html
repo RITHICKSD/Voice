@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoxVerse Studio - Voiceover & Multilingual Dubbing Network</title>
+  <meta name="description" content="Premier global voiceover, multilingual film dubbing, audiobook narration, and audio post-production studio. High-definition native talent roster and state-of-the-art ADR facilities.">
+  
+  <!-- Professional Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome / Feather Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  
+  <!-- SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%234F46E5'/><stop offset='100%' stop-color='%2306B6D4'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='%230B0F19'/><rect x='2' y='2' width='96' height='96' rx='20' fill='none' stroke='url(%23g)' stroke-width='4'/><rect x='25' y='40' width='10' height='20' rx='5' fill='%234F46E5'/><rect x='45' y='25' width='10' height='50' rx='5' fill='%2306B6D4'/><rect x='65' y='35' width='10' height='30' rx='5' fill='%233B82F6'/></svg>">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- GLOBAL HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <!-- LOGO -->
+      <a href="#home1" class="brand-logo">
+        <div class="logo-icon">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+          <span class="bar bar4"></span>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">VOX<span class="accent-text">VERSE</span></span>
+          <span class="brand-tagline">STUDIOS</span>
+        </div>
+      </a>
+
+      <!-- CENTER NAVIGATION -->
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+          
+          <!-- HOME DROPDOWN -->
+          <li class="nav-item dropdown-item" data-page-group="home">
+            <a href="#home1" class="nav-link dropdown-toggle" id="nav-home">
+              <span class="nav-text">Home</span>
+              <i class="fa-solid fa-chevron-down drop-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link" id="nav-home1">
+                  <div class="drop-link-title"><i class="fa-solid fa-microphone-lines"></i> Home 1</div>
+                  <div class="drop-link-sub">Commercial & Brand Voiceover</div>
+                </a>
+              </li>
+              <li>
+                <a href="home2.html" class="dropdown-link" id="nav-home2">
+                  <div class="drop-link-title"><i class="fa-solid fa-film"></i> Home 2</div>
+                  <div class="drop-link-sub">Dubbing & Movie Localization</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" id="nav-about">
+              <span class="nav-text">About</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="services.html" class="nav-link" id="nav-services">
+              <span class="nav-text">Services</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="talent.html" class="nav-link" id="nav-talent">
+              <span class="nav-text">Talent Roster</span>
+            </a>
+          </li>
+
+          <!-- UNIQUE CUSTOM PAGES -->
+          <li class="nav-item">
+            <a href="audiobook.html" class="nav-link" id="nav-audiobook">
+              <span class="nav-text">Audiobook Vault</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="localization.html" class="nav-link" id="nav-localization">
+              <span class="nav-text">Global Localization</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link" id="nav-contact">
+              <span class="nav-text">Contact</span>
+            </a>
+          </li>
+
+          <!-- HEADER UTILITIES (INSIDE MOBILE HAMBURGER MENU) -->
+          <li class="nav-item nav-utility-item">
+            <div class="mobile-utils-row">
+              <!-- RTL / LTR Toggle -->
+              <button class="icon-btn dir-toggle" id="dirToggle" title="Toggle Page Direction (LTR/RTL)" aria-label="Toggle Layout Direction">
+                <span class="dir-badge LTR-label">LTR</span>
+                <span class="dir-badge RTL-label">RTL</span>
+              </button>
+
+              <!-- Dark / Light Theme Toggle -->
+              <button class="icon-btn theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Theme">
+                <i class="fa-solid fa-moon dark-icon"></i>
+                <i class="fa-solid fa-sun light-icon"></i>
+              </button>
+            </div>
+          </li>
+
+          <li class="nav-item nav-utility-item mt-2">
+            <a href="contact.html" class="btn btn-primary btn-block header-cta">Book Studio</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- RIGHT UTILITIES (TOGGLES, CTA & HAMBURGER) -->
+      <div class="header-actions">
+        <!-- RTL / LTR Toggle -->
+        <button class="icon-btn dir-toggle desktop-only-btn" id="dirToggle" title="Toggle Page Direction (LTR/RTL)" aria-label="Toggle Layout Direction">
+          <span class="dir-badge LTR-label">LTR</span>
+          <span class="dir-badge RTL-label">RTL</span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button class="icon-btn theme-toggle desktop-only-btn" id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Theme">
+          <i class="fa-solid fa-moon dark-icon"></i>
+          <i class="fa-solid fa-sun light-icon"></i>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta desktop-only-btn">Book Studio</a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-nav-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN PAGE CONTAINER -->
+  <main class="page-content" id="app">
+
+      
+      <!-- Section 1: Audiobook Hero -->
+      <section class="section hero-section hero-audiobook">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container hero-centered">
+          <div class="hero-content">
+            <span class="sub-heading">Dedicated Literary Soundstage</span>
+            <h1 class="hero-title">The <span class="white-text">Audiobook Vault</span></h1>
+            <p class="hero-subtitle">Complete publishing production hub for authors, publishers, and literary agents seeking immersive long-form storytelling.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Sample Book Chapter Player -->
+      <section class="section book-player-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading">Featured Literary Recordings</span>
+            <h2>Listen To Sample Chapters</h2>
+          </div>
+          <div class="grid grid-3">
+            <div class="book-card glass-panel">
+              <div class="book-cover"><i class="fa-solid fa-book-atlas"></i></div>
+              <h3>"The Quantum Horizon"</h3>
+              <p class="author">Sci-Fi Novel • Narrated by Dominic Thorne</p>
+              <button class="btn btn-primary btn-block mt-2" onclick="playAudioSample('The Quantum Horizon', 'Chapter 1 Sample', 'https://actions.google.com/sounds/v1/ambiences/outdoor_synth.ogg')"><i class="fa-solid fa-play"></i> Play Chapter 1</button>
+            </div>
+
+            <div class="book-card glass-panel">
+              <div class="book-cover"><i class="fa-solid fa-feather-pointed"></i></div>
+              <h3>"Echoes of Venice"</h3>
+              <p class="author">Historical Fiction • Narrated by Elena Rostova</p>
+              <button class="btn btn-primary btn-block mt-2" onclick="playAudioSample('Echoes of Venice', 'Chapter 1 Sample', 'https://actions.google.com/sounds/v1/ambiences/rain_heavy.ogg')"><i class="fa-solid fa-play"></i> Play Chapter 1</button>
+            </div>
+
+            <div class="book-card glass-panel">
+              <div class="book-cover"><i class="fa-solid fa-dragon"></i></div>
+              <h3>"Realm of Ember"</h3>
+              <p class="author">Epic Fantasy (Dual Cast) • Multi-Character</p>
+              <button class="btn btn-primary btn-block mt-2" onclick="playAudioSample('Realm of Ember', 'Dual Narrator Sample', 'https://actions.google.com/sounds/v1/ambiences/fire_crackling.ogg')"><i class="fa-solid fa-play"></i> Play Chapter 1</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Audiobook Recording Booths -->
+      <section class="section audiobook-facilities-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading"><i class="fa-solid fa-book-open-reader"></i> Dedicated Literary Soundproofing</span>
+            <h2>Our Audiobook Recording Booths</h2>
+            <p>Purpose-built vocal isolation booths designed for long-form narration with ergonomic comfort and pristine acoustics.</p>
+          </div>
+          
+          <div class="grid grid-3">
+            <div class="facility-card glass-panel">
+              <div class="facility-icon-circle">
+                <i class="fa-solid fa-door-closed"></i>
+              </div>
+              <h3>Silent Isolation Booths</h3>
+              <p>Ultra-quiet floating floor design eliminates footstep noise and external vibrations. Each booth features triple-layer acoustic treatment with breathable air circulation to maintain comfort during marathon recording sessions.</p>
+              <div class="facility-specs">
+                <span class="spec-badge"><i class="fa-solid fa-volume-xmark"></i> -60dB Noise Floor</span>
+                <span class="spec-badge"><i class="fa-solid fa-wind"></i> Climate Controlled</span>
+              </div>
+            </div>
+
+            <div class="facility-card glass-panel">
+              <div class="facility-icon-circle">
+                <i class="fa-solid fa-headphones"></i>
+              </div>
+              <h3>Real-Time Script Monitoring</h3>
+              <p>High-resolution displays synchronized with your manuscript allow narrators to follow along seamlessly. Live director feedback system enables instant communication without disrupting recording flow or requiring booth exit.</p>
+              <div class="facility-specs">
+                <span class="spec-badge"><i class="fa-solid fa-display"></i> 4K Script Display</span>
+                <span class="spec-badge"><i class="fa-solid fa-comments"></i> Talkback System</span>
+              </div>
+            </div>
+
+            <div class="facility-card glass-panel">
+              <div class="facility-icon-circle">
+                <i class="fa-solid fa-microphone-lines"></i>
+              </div>
+              <h3>Premium Microphone Selection</h3>
+              <p>Choose from studio-grade condenser microphones including Neumann TLM 103, Sennheiser MKH 416, and Rode NTK. Each mic is carefully selected to match your narrator's vocal characteristics and literary genre requirements.</p>
+              <div class="facility-specs">
+                <span class="spec-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Neumann TLM 103</span>
+                <span class="spec-badge"><i class="fa-solid fa-microphone"></i> Sennheiser MKH 416</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="booth-features-row glass-panel mt-4 p-4">
+            <div class="section-header text-center mb-3">
+              <h3>Additional Narrator Amenities</h3>
+            </div>
+            <div class="grid grid-4">
+              <div class="amenity-item">
+                <i class="fa-solid fa-chair"></i>
+                <span>Ergonomic Seating</span>
+              </div>
+              <div class="amenity-item">
+                <i class="fa-solid fa-mug-hot"></i>
+                <span>Beverage Station</span>
+              </div>
+              <div class="amenity-item">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span>Script Stands</span>
+              </div>
+              <div class="amenity-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Flexible Scheduling</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Narrator Voice Matching Tool -->
+      <section class="section voice-match-section bg-alt">
+        <div class="container">
+          <div class="grid grid-2 align-center">
+            <div>
+              <span class="sub-heading">Literary Casting</span>
+              <h2>Find Your Book's Definitive Voice</h2>
+              <p>Audiobook storytelling requires sustained stamina, character accent consistency, and emotional pacing. Our casting directors analyze your manuscript's genre and protagonist demographics.</p>
+            </div>
+            <div class="glass-panel p-4">
+              <h3>Manuscript Casting Assessment</h3>
+              <div class="form-group">
+                <label>Book Genre</label>
+                <select class="form-control">
+                  <option>Thriller / Mystery</option>
+                  <option>Sci-Fi / Fantasy</option>
+                  <option>Self-Help / Non-Fiction</option>
+                  <option>Romance / Drama</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Word Count Estimate</label>
+                <input type="number" class="form-control" placeholder="e.g. 75,000 words" value="65000">
+              </div>
+              <button class="btn btn-secondary btn-block" onclick="alert('Estimated Finished Hours: ~6.5 hrs. Standard production quote generated!')">Calculate Finished Hours</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: ACX / Audible Compliance Quality Checklist -->
+      <section class="section compliance-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading">Technical Guarantee</span>
+            <h2>ACX & Audible Standard Compliance</h2>
+          </div>
+          <div class="grid grid-3">
+            <div class="chk-card glass-panel">
+              <i class="fa-solid fa-check-double chk-icon"></i>
+              <h4>Noise Floor (-60dB)</h4>
+              <p>Ultra-quiet soundproof booths ensure zero background hum or mouth noise clicks.</p>
+            </div>
+            <div class="chk-card glass-panel">
+              <i class="fa-solid fa-check-double chk-icon"></i>
+              <h4>RMS Loudness (-23dB to -18dB)</h4>
+              <p>Strict mastering to exact Audible specification levels for comfortable listening.</p>
+            </div>
+            <div class="chk-card glass-panel">
+              <i class="fa-solid fa-check-double chk-icon"></i>
+              <h4>192kbps MP3 Constant Bitrate</h4>
+              <p>Flawless chapter-by-chapter formatting ready for instant platform upload.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Royalty vs Flat-Rate Publishing Models -->
+      <section class="section publishing-models bg-alt">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading">Flexible Contracts</span>
+            <h2>Production Financing Models</h2>
+          </div>
+          <div class="grid grid-2">
+            <div class="glass-panel p-4 text-center">
+              <h3>Per Finished Hour (PFH)</h3>
+              <div class="price">$220 - $350 <small>/ finished hour</small></div>
+              <p>You retain 100% of author royalties. Full turn-key editing, proofing, and mastering included.</p>
+            </div>
+            <div class="glass-panel p-4 text-center">
+              <h3>Royalty Share Hybrid</h3>
+              <div class="price">Reduced Upfront Rate</div>
+              <p>Partner with top narrators for split royalty revenue models on selected qualifying titles.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Audiobook Production Order CTA -->
+      <section class="section audiobook-cta">
+        <div class="container">
+          <div class="cta-box glass-panel text-center">
+            <h2>Ready To Turn Your Manuscript Into An Audiobook?</h2>
+            <p>Upload your sample manuscript excerpt for a free 5-minute audition sample take.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg">Submit Manuscript Excerpt</a>
+          </div>
+        </div>
+      </section>
+
+    
+</main>
+
+  <!-- COMMON FOOTER (Section 6 for all page views) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top grid grid-4">
+        
+        <div class="footer-brand">
+          <a href="#home1" class="brand-logo mb-3" onclick="navigateTo('home1')">
+            <div class="logo-icon">
+              <span class="bar bar1"></span>
+              <span class="bar bar2"></span>
+              <span class="bar bar3"></span>
+            </div>
+            <div class="logo-text">
+              <span class="brand-name">VOX<span class="accent-text">VERSE</span></span>
+              <span class="brand-tagline">STUDIOS</span>
+            </div>
+          </a>
+          <p>Premier global voiceover, film dubbing, audiobook production, and Dolby Atmos audio post-production studios.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home1" onclick="navigateTo('home1')">Home 1 (Commercial)</a></li>
+            <li><a href="#home2" onclick="navigateTo('home2')">Home 2 (Dubbing)</a></li>
+            <li><a href="#about" onclick="navigateTo('about')">About Us</a></li>
+            <li><a href="#services" onclick="navigateTo('services')">Our Services</a></li>
+            <li><a href="#talent" onclick="navigateTo('talent')">Talent Roster</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Specialties</h4>
+          <ul>
+            <li><a href="#portfolio" onclick="navigateTo('portfolio')">Case Studies</a></li>
+            <li><a href="#audiobook" onclick="navigateTo('audiobook')">Audiobook Vault</a></li>
+            <li><a href="#localization" onclick="navigateTo('localization')">Global Localization</a></li>
+            <li><a href="#contact" onclick="navigateTo('contact')">Contact & Quotes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Studio Audio Insider</h4>
+          <p>Subscribe for casting calls, studio technical blogs, and voice talent spotlights.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to VoxVerse Studio newsletter!');">
+            <input type="email" class="form-control" placeholder="Enter work email..." required>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+          <div class="studio-status mt-3">
+            <span class="pulse-dot"></span> <strong>Soundstage A & B:</strong> Live in Session
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VoxVerse Sound Studios LLC. All rights reserved. Built with precision acoustic design.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Usage</a>
+          <a href="#">Security Protocol</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PERSISTENT GLOBAL AUDIO PLAYER OVERLAY BAR -->
+  <div class="audio-player-bar hidden" id="globalAudioPlayer">
+    <div class="player-bar-container">
+      
+      <div class="player-track-info">
+        <div class="audio-wave-anim">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div>
+          <div class="player-track-title" id="playerTrackTitle">Track Title</div>
+          <div class="player-track-artist" id="playerTrackArtist">Talent Name</div>
+        </div>
+      </div>
+
+      <div class="player-controls-center">
+        <button class="player-btn" onclick="togglePlayPause()" id="playPauseBtn"><i class="fa-solid fa-pause"></i></button>
+        <div class="player-progress-wrapper">
+          <span id="playerCurrentTime">0:00</span>
+          <div class="progress-bar-bg" onclick="seekAudio(event)">
+            <div class="progress-bar-fill" id="playerProgressFill"></div>
+          </div>
+          <span id="playerTotalTime">0:30</span>
+        </div>
+      </div>
+
+      <div class="player-actions-right">
+        <i class="fa-solid fa-volume-high"></i>
+        <button class="close-player-btn" onclick="closeAudioPlayer()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="audioEngine" preload="none"></audio>
+
+  <script src="app.js"></script>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script>
+    (function initStudioMap() {
+      var map = null;
+
+      function createMap() {
+        var mapEl = document.getElementById('studioLeafletMap');
+        if (!mapEl || mapEl._leafletMap) return;
+
+        var isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+        var tileUrl = isDark
+          ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+          : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+
+        map = L.map('studioLeafletMap', { scrollWheelZoom: false }).setView([30, 10], 2);
+        mapEl._leafletMap = map;
+
+        L.tileLayer(tileUrl, {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          subdomains: 'abcd',
+          maxZoom: 19
+        }).addTo(map);
+
+        var studios = [
+          { lat: 34.1808, lng: -118.3089, name: '🎙️ Los Angeles — Burbank Soundstage A', info: '2400 N Hollywood Way, Burbank, CA<br><strong>Dolby Atmos 7.1.4 Certified</strong>' },
+          { lat: 51.5138, lng: -0.1313, name: '🎚️ London — Soho Audio Hub', info: '45 Dean Street, Soho, London W1D<br><strong>SSL Analogue Console Stage</strong>' },
+          { lat: 35.6938, lng: 139.7034, name: '🎌 Tokyo — Shinjuku Sound Lab', info: '3-14-1 Minami-Shinjuku, Tokyo<br><strong>Pro Tools HDX Anime Hub</strong>' }
+        ];
+
+        var customIcon = L.divIcon({
+          className: '',
+          html: '<div style="width:16px;height:16px;background:linear-gradient(135deg,#4F46E5,#06B6D4);border-radius:50%;border:2px solid #fff;box-shadow:0 0 12px rgba(6,182,212,0.9);"></div>',
+          iconSize: [16, 16],
+          iconAnchor: [8, 8],
+          popupAnchor: [0, -10]
+        });
+
+        studios.forEach(function(s) {
+          L.marker([s.lat, s.lng], { icon: customIcon })
+            .addTo(map)
+            .bindPopup('<strong style="font-family:Outfit,sans-serif;color:#0F172A;">' + s.name + '</strong><br><span style="font-size:0.82rem;color:#475569;">' + s.info + '</span>');
+        });
+
+        var obs = new MutationObserver(function() {
+          if (!map) return;
+          var dark = document.documentElement.getAttribute('data-theme') !== 'light';
+          var url = dark
+            ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+            : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+          map.eachLayer(function(l) { if (l.options && l.options.attribution) map.removeLayer(l); });
+          L.tileLayer(url, { attribution: '&copy; OpenStreetMap &copy; CARTO', subdomains: 'abcd', maxZoom: 19 }).addTo(map);
+        });
+        obs.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      }
+
+      function refreshMap() {
+        if (!map) {
+          createMap();
+        }
+        if (map) {
+          setTimeout(function() {
+            map.invalidateSize();
+          }, 150);
+        }
+      }
+
+      window.tryInitStudioMap = refreshMap;
+      window.initStudioMap = refreshMap;
+
+      document.addEventListener('DOMContentLoaded', createMap);
+      window.addEventListener('load', refreshMap);
+      document.addEventListener('click', function(e) {
+        if (e.target && (e.target.closest('[onclick*="contact"]') || e.target.closest('a[href*="contact"]'))) {
+          setTimeout(refreshMap, 200);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

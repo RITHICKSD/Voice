@@ -10,20 +10,66 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigationEngine();
   initAudioEngine();
   initMobileMenu();
+  setActiveNavByCurrentPage(); // Add this for multi-page sites
 });
+
+/* --------------------------------------------------------------------------
+   SET ACTIVE NAV BASED ON CURRENT PAGE (For Multi-Page Sites)
+   -------------------------------------------------------------------------- */
+function setActiveNavByCurrentPage() {
+  // Get current page filename
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  
+  // Clear all active states first
+  const navItems = document.querySelectorAll('.nav-item');
+  navItems.forEach(item => item.classList.remove('active'));
+  
+  // Map filenames to nav IDs
+  const pageMap = {
+    'index.html': 'nav-home',
+    'home2.html': 'nav-home',
+    'about.html': 'nav-about',
+    'services.html': 'nav-services',
+    'talent.html': 'nav-talent',
+    'audiobook.html': 'nav-audiobook',
+    'localization.html': 'nav-localization',
+    'contact.html': 'nav-contact'
+  };
+  
+  // Get the nav ID for current page
+  const navId = pageMap[currentPage] || pageMap['index.html'];
+  const activeLink = document.getElementById(navId);
+  
+  if (activeLink && activeLink.closest('.nav-item')) {
+    activeLink.closest('.nav-item').classList.add('active');
+  }
+  
+  // Also mark home dropdown if on home1 or home2
+  if (currentPage === 'index.html' || currentPage === 'home2.html') {
+    const homeGroup = document.querySelector('[data-page-group="home"]');
+    if (homeGroup) homeGroup.classList.add('active');
+  }
+}
 
 /* --------------------------------------------------------------------------
    1. NAVIGATION ENGINE (Multi-Page Routing & Active Link Highlights)
    -------------------------------------------------------------------------- */
 function navigateTo(pageId) {
-  // Hide all page views
+  // Force visibility reset to prevent cache issues
   const pages = document.querySelectorAll('.page-view');
-  pages.forEach(page => page.classList.remove('active'));
+  pages.forEach(page => {
+    page.classList.remove('active');
+    page.style.display = 'none';
+  });
 
-  // Show target page
+  // Show target page with forced display
   const targetPage = document.getElementById(`page-${pageId}`);
   if (targetPage) {
-    targetPage.classList.add('active');
+    targetPage.style.display = 'block';
+    // Small delay to ensure display is set before adding active class
+    setTimeout(() => {
+      targetPage.classList.add('active');
+    }, 10);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     if (pageId === 'contact' && window.tryInitStudioMap) {
       setTimeout(function() {

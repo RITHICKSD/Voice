@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoxVerse Studio - Voiceover & Multilingual Dubbing Network</title>
+  <meta name="description" content="Premier global voiceover, multilingual film dubbing, audiobook narration, and audio post-production studio. High-definition native talent roster and state-of-the-art ADR facilities.">
+  
+  <!-- Professional Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome / Feather Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  
+  <!-- SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%234F46E5'/><stop offset='100%' stop-color='%2306B6D4'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='%230B0F19'/><rect x='2' y='2' width='96' height='96' rx='20' fill='none' stroke='url(%23g)' stroke-width='4'/><rect x='25' y='40' width='10' height='20' rx='5' fill='%234F46E5'/><rect x='45' y='25' width='10' height='50' rx='5' fill='%2306B6D4'/><rect x='65' y='35' width='10' height='30' rx='5' fill='%233B82F6'/></svg>">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- GLOBAL HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <!-- LOGO -->
+      <a href="#home1" class="brand-logo">
+        <div class="logo-icon">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+          <span class="bar bar4"></span>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">VOX<span class="accent-text">VERSE</span></span>
+          <span class="brand-tagline">STUDIOS</span>
+        </div>
+      </a>
+
+      <!-- CENTER NAVIGATION -->
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+          
+          <!-- HOME DROPDOWN -->
+          <li class="nav-item dropdown-item" data-page-group="home">
+            <a href="#home1" class="nav-link dropdown-toggle" id="nav-home">
+              <span class="nav-text">Home</span>
+              <i class="fa-solid fa-chevron-down drop-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link" id="nav-home1">
+                  <div class="drop-link-title"><i class="fa-solid fa-microphone-lines"></i> Home 1</div>
+                  <div class="drop-link-sub">Commercial & Brand Voiceover</div>
+                </a>
+              </li>
+              <li>
+                <a href="home2.html" class="dropdown-link" id="nav-home2">
+                  <div class="drop-link-title"><i class="fa-solid fa-film"></i> Home 2</div>
+                  <div class="drop-link-sub">Dubbing & Movie Localization</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" id="nav-about">
+              <span class="nav-text">About</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="services.html" class="nav-link" id="nav-services">
+              <span class="nav-text">Services</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="talent.html" class="nav-link" id="nav-talent">
+              <span class="nav-text">Talent Roster</span>
+            </a>
+          </li>
+
+          <!-- UNIQUE CUSTOM PAGES -->
+          <li class="nav-item">
+            <a href="audiobook.html" class="nav-link" id="nav-audiobook">
+              <span class="nav-text">Audiobook Vault</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="localization.html" class="nav-link" id="nav-localization">
+              <span class="nav-text">Global Localization</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link" id="nav-contact">
+              <span class="nav-text">Contact</span>
+            </a>
+          </li>
+
+          <!-- HEADER UTILITIES (INSIDE MOBILE HAMBURGER MENU) -->
+          <li class="nav-item nav-utility-item">
+            <div class="mobile-utils-row">
+              <!-- RTL / LTR Toggle -->
+              <button class="icon-btn dir-toggle" id="dirToggle" title="Toggle Page Direction (LTR/RTL)" aria-label="Toggle Layout Direction">
+                <span class="dir-badge LTR-label">LTR</span>
+                <span class="dir-badge RTL-label">RTL</span>
+              </button>
+
+              <!-- Dark / Light Theme Toggle -->
+              <button class="icon-btn theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Theme">
+                <i class="fa-solid fa-moon dark-icon"></i>
+                <i class="fa-solid fa-sun light-icon"></i>
+              </button>
+            </div>
+          </li>
+
+          <li class="nav-item nav-utility-item mt-2">
+            <a href="contact.html" class="btn btn-primary btn-block header-cta">Book Studio</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- RIGHT UTILITIES (TOGGLES, CTA & HAMBURGER) -->
+      <div class="header-actions">
+        <!-- RTL / LTR Toggle -->
+        <button class="icon-btn dir-toggle desktop-only-btn" id="dirToggle" title="Toggle Page Direction (LTR/RTL)" aria-label="Toggle Layout Direction">
+          <span class="dir-badge LTR-label">LTR</span>
+          <span class="dir-badge RTL-label">RTL</span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button class="icon-btn theme-toggle desktop-only-btn" id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Theme">
+          <i class="fa-solid fa-moon dark-icon"></i>
+          <i class="fa-solid fa-sun light-icon"></i>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta desktop-only-btn">Book Studio</a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-nav-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN PAGE CONTAINER -->
+  <main class="page-content" id="app">
+
+      
+      <!-- Section 1: Talent Hero -->
+      <section class="section hero-section hero-talent">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container hero-centered">
+          <div class="hero-content">
+            <span class="sub-heading">Global Vocal Pool</span>
+            <h1 class="hero-title">Discover World-Class <span class="white-text">Voice Talent</span></h1>
+            <p class="hero-subtitle">Filter by accent, gender, vocal tone, and industry application to find your project's ideal voice actor.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Interactive Roster Filter Bar -->
+      <section class="section filter-section bg-alt">
+        <div class="container">
+          <div class="filter-box glass-panel">
+            <div class="filter-row">
+              <div class="filter-group">
+                <label><i class="fa-solid fa-globe"></i> Language / Accent</label>
+                <select class="form-control" id="filterLanguage" onchange="filterTalentRoster()">
+                  <option value="all">All Languages</option>
+                  <option value="us">English (US)</option>
+                  <option value="uk">English (UK)</option>
+                  <option value="es">Spanish (Latin)</option>
+                  <option value="fr">French</option>
+                  <option value="de">German</option>
+                  <option value="ja">Japanese</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label><i class="fa-solid fa-venus-mars"></i> Gender</label>
+                <select class="form-control" id="filterGender" onchange="filterTalentRoster()">
+                  <option value="all">All Genders</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="nonbinary">Non-Binary</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label><i class="fa-solid fa-sliders"></i> Vocal Tone</label>
+                <select class="form-control" id="filterTone" onchange="filterTalentRoster()">
+                  <option value="all">All Tones</option>
+                  <option value="warm">Warm & Friendly</option>
+                  <option value="deep">Deep & Authoritative</option>
+                  <option value="energetic">Energetic & Youthful</option>
+                  <option value="dramatic">Dramatic & Cinematic</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Dynamic Talent Cards Grid with Audio Playback -->
+      <section class="section roster-grid-section">
+        <div class="container">
+          <div class="grid grid-3" id="talentGrid">
+            
+            <!-- Talent 1 -->
+            <div class="talent-card glass-panel" data-lang="us" data-gender="female" data-tone="warm">
+              <div class="talent-header">
+                <div class="talent-avatar"><i class="fa-solid fa-microphone"></i></div>
+                <div>
+                  <h3>Sarah Jenkins</h3>
+                  <span class="talent-tag">US English • Female</span>
+                </div>
+              </div>
+              <p class="talent-desc">Warm, conversational tone. Ideal for tech commercials and healthcare narratives.</p>
+              <div class="talent-tags">
+                <span class="chip">Commercial</span>
+                <span class="chip">Corporate</span>
+              </div>
+              <button class="btn btn-primary btn-block mt-3" onclick="playAudioSample('Sarah Jenkins', 'US English Commercial', 'https://actions.google.com/sounds/v1/ambiences/outdoor_synth.ogg')">
+                <i class="fa-solid fa-play"></i> Play Voice Sample
+              </button>
+            </div>
+
+            <!-- Talent 2 -->
+            <div class="talent-card glass-panel" data-lang="uk" data-gender="male" data-tone="deep">
+              <div class="talent-header">
+                <div class="talent-avatar"><i class="fa-solid fa-microphone"></i></div>
+                <div>
+                  <h3>Dominic Thorne</h3>
+                  <span class="talent-tag">UK English (RP) • Male</span>
+                </div>
+              </div>
+              <p class="talent-desc">Deep, resonant British voice. Perfect for documentary narration & luxury ads.</p>
+              <div class="talent-tags">
+                <span class="chip">Documentary</span>
+                <span class="chip">Luxury</span>
+              </div>
+              <button class="btn btn-primary btn-block mt-3" onclick="playAudioSample('Dominic Thorne', 'UK RP Documentary', 'https://actions.google.com/sounds/v1/ambiences/rain_heavy.ogg')">
+                <i class="fa-solid fa-play"></i> Play Voice Sample
+              </button>
+            </div>
+
+            <!-- Talent 3 -->
+            <div class="talent-card glass-panel" data-lang="es" data-gender="female" data-tone="energetic">
+              <div class="talent-header">
+                <div class="talent-avatar"><i class="fa-solid fa-microphone"></i></div>
+                <div>
+                  <h3>Lucia Morales</h3>
+                  <span class="talent-tag">Spanish (Latin) • Female</span>
+                </div>
+              </div>
+              <p class="talent-desc">Vibrant, upbeat Latin Spanish tone with rich emotional versatility.</p>
+              <div class="talent-tags">
+                <span class="chip">Animation</span>
+                <span class="chip">Commercial</span>
+              </div>
+              <button class="btn btn-primary btn-block mt-3" onclick="playAudioSample('Lucia Morales', 'Latin Spanish Upbeat', 'https://actions.google.com/sounds/v1/ambiences/forest_morning.ogg')">
+                <i class="fa-solid fa-play"></i> Play Voice Sample
+              </button>
+            </div>
+
+            <!-- Talent 4 -->
+            <div class="talent-card glass-panel" data-lang="de" data-gender="male" data-tone="dramatic">
+              <div class="talent-header">
+                <div class="talent-avatar"><i class="fa-solid fa-microphone"></i></div>
+                <div>
+                  <h3>Maximilian Kraft</h3>
+                  <span class="talent-tag">German • Male</span>
+                </div>
+              </div>
+              <p class="talent-desc">Powerful German voice actor for video game trailers and sports commercials.</p>
+              <div class="talent-tags">
+                <span class="chip">Gaming</span>
+                <span class="chip">Trailer</span>
+              </div>
+              <button class="btn btn-primary btn-block mt-3" onclick="playAudioSample('Maximilian Kraft', 'German Game Trailer', 'https://actions.google.com/sounds/v1/ambiences/fire_crackling.ogg')">
+                <i class="fa-solid fa-play"></i> Play Voice Sample
+              </button>
+            </div>
+
+            <!-- Talent 5 -->
+            <div class="talent-card glass-panel" data-lang="ja" data-gender="female" data-tone="warm">
+              <div class="talent-header">
+                <div class="talent-avatar"><i class="fa-solid fa-microphone"></i></div>
+                <div>
+                  <h3>Aoi Sato</h3>
+                  <span class="talent-tag">Japanese • Female</span>
+                </div>
+              </div>
+              <p class="talent-desc">Gentle, polished Japanese voice for corporate promos & audiobook storytelling.</p>
+              <div class="talent-tags">
+                <span class="chip">Audiobook</span>
+                <span class="chip">Promo</span>
+              </div>
+              <button class="btn btn-primary btn-block mt-3" onclick="playAudioSample('Aoi Sato', 'Japanese Narrative', 'https://actions.google.com/sounds/v1/ambiences/field_night.ogg')">
+                <i class="fa-solid fa-play"></i> Play Voice Sample
+              </button>
+            </div>
+
+            <!-- Talent 6 -->
+            <div class="talent-card glass-panel" data-lang="fr" data-gender="male" data-tone="warm">
+              <div class="talent-header">
+                <div class="talent-avatar"><i class="fa-solid fa-microphone"></i></div>
+                <div>
+                  <h3>Pierre Dubois</h3>
+                  <span class="talent-tag">French (Parisian) • Male</span>
+                </div>
+              </div>
+              <p class="talent-desc">Silky Parisian accent for high-end fashion, perfumes, and gastronomy spots.</p>
+              <div class="talent-tags">
+                <span class="chip">Fashion</span>
+                <span class="chip">E-Learning</span>
+              </div>
+              <button class="btn btn-primary btn-block mt-3" onclick="playAudioSample('Pierre Dubois', 'French Luxury Spot', 'https://actions.google.com/sounds/v1/ambiences/outdoor_synth.ogg')">
+                <i class="fa-solid fa-play"></i> Play Voice Sample
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Live Directing & Remote Session Booking -->
+      <section class="section remote-dir-section bg-alt">
+        <div class="container">
+          <div class="grid grid-2 align-center">
+            <div>
+              <span class="sub-heading">Real-Time Direction</span>
+              <h2>Direct Talent Live From Anywhere</h2>
+              <p>Connect to our studio soundstage via Source-Connect, IPDTL, Zoom, or Microsoft Teams. Speak directly with the voice talent while our engineer manages recording and mark-taking.</p>
+            </div>
+            <div class="glass-panel p-4 text-center">
+              <i class="fa-solid fa-satellite-dish service-big-icon"></i>
+              <h3>Studio Link Protocols</h3>
+              <p>Source-Connect Pro X | ipDTL | ISDN Bridge</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Voice Talent Application Section -->
+      <section class="section join-roster-section">
+        <div class="container">
+          <div class="glass-panel p-5 text-center">
+            <h2>Are You A Professional Voice Artist?</h2>
+            <p>We are constantly seeking established native voice actors and dubbing directors across 50+ languages.</p>
+            <button class="btn btn-outline btn-lg mt-3" onclick="alert('Submission portal opening! Please prepare 3 MP3 reel samples.')">Submit Your Voice Demo</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Standard Rate Estimator Matrix -->
+      <section class="section rates-section bg-alt">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="sub-heading">Transparent Pricing</span>
+            <h2>Standard Voiceover Rate Guidelines</h2>
+          </div>
+          <div class="grid grid-3">
+            <div class="rate-card glass-panel">
+              <h4>Local Commercial</h4>
+              <div class="price">$350 <small>/ spot</small></div>
+              <p>13-Week Local TV or Radio Usage. Clean dry voice track.</p>
+            </div>
+            <div class="rate-card glass-panel">
+              <h4>National TV / Streaming</h4>
+              <div class="price">$1,200 <small>/ spot</small></div>
+              <p>National network broadcast + digital buyout rights included.</p>
+            </div>
+            <div class="rate-card glass-panel">
+              <h4>Corporate / E-Learning</h4>
+              <p class="price">$0.25 <small>/ word</small></p>
+              <p>Minimum project fee $250. Full non-broadcast rights.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+</main>
+
+  <!-- COMMON FOOTER (Section 6 for all page views) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top grid grid-4">
+        
+        <div class="footer-brand">
+          <a href="#home1" class="brand-logo mb-3" onclick="navigateTo('home1')">
+            <div class="logo-icon">
+              <span class="bar bar1"></span>
+              <span class="bar bar2"></span>
+              <span class="bar bar3"></span>
+            </div>
+            <div class="logo-text">
+              <span class="brand-name">VOX<span class="accent-text">VERSE</span></span>
+              <span class="brand-tagline">STUDIOS</span>
+            </div>
+          </a>
+          <p>Premier global voiceover, film dubbing, audiobook production, and Dolby Atmos audio post-production studios.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home1" onclick="navigateTo('home1')">Home 1 (Commercial)</a></li>
+            <li><a href="#home2" onclick="navigateTo('home2')">Home 2 (Dubbing)</a></li>
+            <li><a href="#about" onclick="navigateTo('about')">About Us</a></li>
+            <li><a href="#services" onclick="navigateTo('services')">Our Services</a></li>
+            <li><a href="#talent" onclick="navigateTo('talent')">Talent Roster</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Specialties</h4>
+          <ul>
+            <li><a href="#portfolio" onclick="navigateTo('portfolio')">Case Studies</a></li>
+            <li><a href="#audiobook" onclick="navigateTo('audiobook')">Audiobook Vault</a></li>
+            <li><a href="#localization" onclick="navigateTo('localization')">Global Localization</a></li>
+            <li><a href="#contact" onclick="navigateTo('contact')">Contact & Quotes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Studio Audio Insider</h4>
+          <p>Subscribe for casting calls, studio technical blogs, and voice talent spotlights.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to VoxVerse Studio newsletter!');">
+            <input type="email" class="form-control" placeholder="Enter work email..." required>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+          <div class="studio-status mt-3">
+            <span class="pulse-dot"></span> <strong>Soundstage A & B:</strong> Live in Session
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VoxVerse Sound Studios LLC. All rights reserved. Built with precision acoustic design.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Usage</a>
+          <a href="#">Security Protocol</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PERSISTENT GLOBAL AUDIO PLAYER OVERLAY BAR -->
+  <div class="audio-player-bar hidden" id="globalAudioPlayer">
+    <div class="player-bar-container">
+      
+      <div class="player-track-info">
+        <div class="audio-wave-anim">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div>
+          <div class="player-track-title" id="playerTrackTitle">Track Title</div>
+          <div class="player-track-artist" id="playerTrackArtist">Talent Name</div>
+        </div>
+      </div>
+
+      <div class="player-controls-center">
+        <button class="player-btn" onclick="togglePlayPause()" id="playPauseBtn"><i class="fa-solid fa-pause"></i></button>
+        <div class="player-progress-wrapper">
+          <span id="playerCurrentTime">0:00</span>
+          <div class="progress-bar-bg" onclick="seekAudio(event)">
+            <div class="progress-bar-fill" id="playerProgressFill"></div>
+          </div>
+          <span id="playerTotalTime">0:30</span>
+        </div>
+      </div>
+
+      <div class="player-actions-right">
+        <i class="fa-solid fa-volume-high"></i>
+        <button class="close-player-btn" onclick="closeAudioPlayer()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="audioEngine" preload="none"></audio>
+
+  <script src="app.js"></script>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script>
+    (function initStudioMap() {
+      var map = null;
+
+      function createMap() {
+        var mapEl = document.getElementById('studioLeafletMap');
+        if (!mapEl || mapEl._leafletMap) return;
+
+        var isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+        var tileUrl = isDark
+          ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+          : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+
+        map = L.map('studioLeafletMap', { scrollWheelZoom: false }).setView([30, 10], 2);
+        mapEl._leafletMap = map;
+
+        L.tileLayer(tileUrl, {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          subdomains: 'abcd',
+          maxZoom: 19
+        }).addTo(map);
+
+        var studios = [
+          { lat: 34.1808, lng: -118.3089, name: '🎙️ Los Angeles — Burbank Soundstage A', info: '2400 N Hollywood Way, Burbank, CA<br><strong>Dolby Atmos 7.1.4 Certified</strong>' },
+          { lat: 51.5138, lng: -0.1313, name: '🎚️ London — Soho Audio Hub', info: '45 Dean Street, Soho, London W1D<br><strong>SSL Analogue Console Stage</strong>' },
+          { lat: 35.6938, lng: 139.7034, name: '🎌 Tokyo — Shinjuku Sound Lab', info: '3-14-1 Minami-Shinjuku, Tokyo<br><strong>Pro Tools HDX Anime Hub</strong>' }
+        ];
+
+        var customIcon = L.divIcon({
+          className: '',
+          html: '<div style="width:16px;height:16px;background:linear-gradient(135deg,#4F46E5,#06B6D4);border-radius:50%;border:2px solid #fff;box-shadow:0 0 12px rgba(6,182,212,0.9);"></div>',
+          iconSize: [16, 16],
+          iconAnchor: [8, 8],
+          popupAnchor: [0, -10]
+        });
+
+        studios.forEach(function(s) {
+          L.marker([s.lat, s.lng], { icon: customIcon })
+            .addTo(map)
+            .bindPopup('<strong style="font-family:Outfit,sans-serif;color:#0F172A;">' + s.name + '</strong><br><span style="font-size:0.82rem;color:#475569;">' + s.info + '</span>');
+        });
+
+        var obs = new MutationObserver(function() {
+          if (!map) return;
+          var dark = document.documentElement.getAttribute('data-theme') !== 'light';
+          var url = dark
+            ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+            : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+          map.eachLayer(function(l) { if (l.options && l.options.attribution) map.removeLayer(l); });
+          L.tileLayer(url, { attribution: '&copy; OpenStreetMap &copy; CARTO', subdomains: 'abcd', maxZoom: 19 }).addTo(map);
+        });
+        obs.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      }
+
+      function refreshMap() {
+        if (!map) {
+          createMap();
+        }
+        if (map) {
+          setTimeout(function() {
+            map.invalidateSize();
+          }, 150);
+        }
+      }
+
+      window.tryInitStudioMap = refreshMap;
+      window.initStudioMap = refreshMap;
+
+      document.addEventListener('DOMContentLoaded', createMap);
+      window.addEventListener('load', refreshMap);
+      document.addEventListener('click', function(e) {
+        if (e.target && (e.target.closest('[onclick*="contact"]') || e.target.closest('a[href*="contact"]'))) {
+          setTimeout(refreshMap, 200);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
